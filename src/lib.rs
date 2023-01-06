@@ -206,14 +206,43 @@ pub struct Place {
 /// An address that a place can have.
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Address {
-    pub city: Option<String>,
-    pub state_district: Option<String>,
-    pub state: Option<String>,
-    #[serde(rename = "ISO3166-2-lvl4")]
-    pub iso3166_2_lvl4: Option<String>,
-    pub postcode: Option<String>,
+    pub continent: Option<String>,
+
     pub country: Option<String>,
     pub country_code: Option<String>,
+
+    pub region: Option<String>,
+    pub state: Option<String>,
+    pub state_district: Option<String>,
+    pub county: Option<String>,
+
+    #[serde(rename = "ISO3166-2-lvl4")]
+    pub iso3166_2_lvl4: Option<String>,
+
+    pub municipality: Option<String>,
+    pub city: Option<String>,
+    pub town: Option<String>,
+    pub village: Option<String>,
+
+    pub city_district: Option<String>,
+    pub district: Option<String>,
+    pub borough: Option<String>,
+    pub suburb: Option<String>,
+    pub subdivision: Option<String>,
+
+    pub hamlet: Option<String>,
+    pub croft: Option<String>,
+    pub isolated_dwelling: Option<String>,
+
+    pub neighbourhood: Option<String>,
+    pub allotments: Option<String>,
+    pub quarter: Option<String>,
+
+    pub road: Option<String>,
+    pub house_number: Option<String>,
+    pub house_name: Option<String>,
+
+    pub postcode: Option<String>,
 }
 
 /// Some extra metadata that a place might have.
